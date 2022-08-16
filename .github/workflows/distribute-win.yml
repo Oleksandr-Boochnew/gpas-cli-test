@@ -25,12 +25,12 @@ jobs:
     - name: Install Samtools
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/samtools.zip" -OutFile samtools.zip
+        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/blob/main/lib/win/samtools.zip" -OutFile samtools.zip
         Expand-Archive -LiteralPath "samtools.zip" -DestinationPath .\
     - name: Install readItAndKeep
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
+        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/blob/main/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
         Expand-Archive -LiteralPath "readItAndKeep.zip" -DestinationPath .\
     - name: Build PyInstaller binary
       run: |
