@@ -36,6 +36,7 @@ jobs:
       run: |
         pyinstaller --onefile --name cli-upload --add-data src\gpas\data;data --noconfirm src\gpas\cli-upload.py
     - name: Copy files into dist/
+      shell: pwsh
       run: |
         Copy-Item "readItAndKeep.exe" -Destination "dist\"
         Copy-Item "samtools.exe" -Destination "dist\"
