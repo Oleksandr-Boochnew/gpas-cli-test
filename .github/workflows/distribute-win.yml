@@ -23,13 +23,13 @@ jobs:
         pip install pytest pytest-cov pyinstaller
         pip install .\
     - name: Install Samtools
+      shell: pwsh
       run: |
-        PowerShell
         Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/samtools.zip" -OutFile samtools.zip
         Expand-Archive -LiteralPath "samtools.zip" -DestinationPath .\
     - name: Install readItAndKeep
+      shell: pwsh
       run: |
-        PowerShell
         Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
         Expand-Archive -LiteralPath "readItAndKeep.zip" -DestinationPath .\
     - name: Build PyInstaller binary
