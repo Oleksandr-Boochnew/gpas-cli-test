@@ -33,8 +33,9 @@ jobs:
         Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/raw/main/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
         Expand-Archive -LiteralPath "readItAndKeep.zip" -DestinationPath .\
     - name: Build PyInstaller binary
+      shell: cmd
       run: |
-        pyinstaller --onefile --name cli-upload --add-data src\gpas\data;data --noconfirm src\gpas\cli-upload.py
+        pyinstaller --onefile --name cli-upload --add-data src/gpas/data;data --noconfirm src/gpas/cli-upload.py
     - name: Copy files into dist/
       shell: pwsh
       run: |
@@ -42,6 +43,7 @@ jobs:
         Copy-Item "samtools.exe" -Destination "dist\"
         Copy-Item "*.dll" -Destination "dist\"
     - name: Test binary
+      shell: cmd
       run: |
         dist\cli-upload tests\test-data\large-illumina-bam.csv --processes 1
     - name: Store dist
