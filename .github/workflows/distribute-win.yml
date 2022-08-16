@@ -25,12 +25,12 @@ jobs:
     - name: Install Samtools
       run: |
         PowerShell
-        Invoke-WebRequest -Uri "https://github.com/GlobalPathogenAnalysisService/gpas-cli/lib/win/samtools.zip" -OutFile samtools.zip
+        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/samtools.zip" -OutFile samtools.zip
         Expand-Archive -LiteralPath "samtools.zip" -DestinationPath .\
     - name: Install readItAndKeep
       run: |
         PowerShell
-        Invoke-WebRequest -Uri "https://github.com/GlobalPathogenAnalysisService/gpas-cli/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
+        Invoke-WebRequest -Uri "https://github.com/Oleksandr-Boochnew/gpas-cli-test/lib/win/readItAndKeep.zip" -OutFile readItAndKeep.zip
         Expand-Archive -LiteralPath "readItAndKeep.zip" -DestinationPath .\
     - name: Build PyInstaller binary
       run: |
