@@ -4,7 +4,7 @@ on:
   release:
     types: [published]
 jobs:
-  win-build:
+  build:
     name: Python ${{ matrix.python-version }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
