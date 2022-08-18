@@ -116,4 +116,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          cli-upload-${{ matrix.os }}
+          dist\cli-upload-${{ matrix.os }}
